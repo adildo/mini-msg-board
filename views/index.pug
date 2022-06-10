@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  each msg, index in messages
+    h2= 'message number ' + parseInt(index + 1 ) 
+    p= msg.text
+    p= msg.user
+    p= msg.added
+  a(href='/new')= 'Add another message'
